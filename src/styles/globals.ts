@@ -24,6 +24,7 @@ export default createGlobalStyle`
     --color-blog: #042c54;
     --color-text: #81AFDD;
     --color-subtext: #FF8A71;
+    --color-button: #FF4820;
   }
 
   body {

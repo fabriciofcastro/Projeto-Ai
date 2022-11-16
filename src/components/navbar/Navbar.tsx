@@ -2,7 +2,7 @@ import * as S from './style';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'
 import logo from 'public/logo.svg'
 import { useState } from 'react';
-import Menu from './MenuMobile';
+import Menu from './Menu';
 
 const Navbar: React.FC = () => {
 
@@ -10,47 +10,40 @@ const Navbar: React.FC = () => {
 
   return (
     <S.Navbar>
-      <S.NavbarLink>
-        <S.NavbarLinkLogo>
-          <S.NavbarLogoImg src={ logo.src } alt="Logo" />
-        </S.NavbarLinkLogo>
-        <S.NavbarLinkContainer>
+      <S.NavbarLinks>
+        <S.NavbarLinksLogo>
+          <img src={ logo.src } alt="Logo" />
+        </S.NavbarLinksLogo>
+        <S.NavbarLinksContainer>
           <Menu />
-        </S.NavbarLinkContainer>
-      </S.NavbarLink>
-      <S.NavbarSing>
-        <S.NavbarSing_p>
-          Sing in
-        </S.NavbarSing_p>
-        <S.NavbarButton type="button">
-          Sing up
-        </S.NavbarButton>
-      </S.NavbarSing>
+        </S.NavbarLinksContainer>
+      </S.NavbarLinks>
+
+      <S.NavbarSign>
+        <p>Sign in </p>
+        <S.Button>Sign Up</S.Button>
+      </S.NavbarSign>
       <S.NavbarMenu>
         {
           toggleMenu
-            ? <RiCloseLine color="FFF" size={ 27 } onClick={ () => setToggleMenu(false) } />
-            :
-            <RiMenu3Line color="FFF" size={ 27 } onClick={ () => setToggleMenu(true) }
-            />
+            ? <RiCloseLine color="#FFF" size={ 27 } onClick={ () => setToggleMenu(false) } />
+            : <RiMenu3Line color="#FFF" size={ 27 } onClick={ () => setToggleMenu(true) } />
         }
-        { toggleMenu && (
-          <S.NavbarLinkContainer>
-            <S.NavbarMenuContaine>
-              <Menu />
+        {
+          toggleMenu && (
+            <S.NavbarMenuContainer>
+              <div className="scale-up-center">
+                <Menu />
+                <S.NavbarMenuContainerLinksSign>
 
-              <S.NavbarSing>
-                <S.NavbarSing_p>
-                  Sing in
-                </S.NavbarSing_p>
-                <S.NavbarButton type="button">
-                  Sing up
-                </S.NavbarButton>
-              </S.NavbarSing>
+                  <p>Sign in </p>
+                  <S.Button>Sign Up</S.Button>
 
-            </S.NavbarMenuContaine>
-          </S.NavbarLinkContainer>
-        ) }
+                </S.NavbarMenuContainerLinksSign>
+              </div>
+            </S.NavbarMenuContainer>
+          )
+        }
       </S.NavbarMenu>
     </S.Navbar>
   )
