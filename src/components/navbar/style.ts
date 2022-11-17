@@ -123,7 +123,7 @@ export const NavbarMenu =styled.div`
       cursor: pointer;
     }
 
-    @media screen and (max-width: 105rem) {
+    @media screen and (max-width: 60rem) {
       display: flex;
     }
 `

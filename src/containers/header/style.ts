@@ -1,18 +1,19 @@
 import styled from "styled-components";
 
+
 export const Header = styled.div`
-  display: flex;
-  margin: 0 4rem;
-
-    @media screen and (max-width: 105rem) {
-      flex-direction: column;
-    }
-`
-
-export const HeaderSectionPadding = styled.div`
   color: #fff;
   font-size: 1.4rem;
+  display: flex;
+  flex-direction: row;
 
+      @media screen and (max-width: 65rem){
+            flex-direction: column;
+      }
+
+      @media screen and (max-width: 49rem){
+           flex-direction: column;
+        }
 `
 export const HeaderContent = styled.div`
   display: flex;
@@ -32,9 +33,15 @@ export const HeaderContent = styled.div`
          font-weight: 900;
          letter-spacing: -.04em;
 
+
          @media screen and (max-width: 65rem){
             font-size: 4.8rem;
             line-height: 6rem;
+
+        @media screen and (max-width: 49rem){
+           font-size: 3.6 rem;
+           line-height: 4.8rem;
+        }
       }
       }
 
@@ -50,6 +57,11 @@ export const HeaderContent = styled.div`
           @media screen and (max-width: 65rem){
             font-size: 1.6rem;
             line-height: 2.4rem;
+          }
+
+          @media screen and (max-width: 49rem){
+           font-size: 1.4rem;
+           line-height: 2.4rem;
           }
       }
 
@@ -76,6 +88,16 @@ export const Input = styled.input`
   padding: 0 1rem;
   color: #FFF;
 
+      @media screen and (max-width: 65rem){
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+          }
+
+      @media screen and (max-width: 49rem){
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+      }
+
 `
 export const Button = styled.button`
   flex: 0.6;
@@ -95,6 +117,11 @@ export const Button = styled.button`
 
   border-top-right-radius: .5rem;
   border-bottom-right-radius: 0.5rem;
+
+      @media screen and (max-width: 65rem){
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+      }
 `
 export const HeaderContentPeople = styled.div`
   width: 100%;
@@ -124,8 +151,10 @@ export const HeaderImage = styled.div`
  align-items: center;
  width: 100%;
 
+
+
       img {
-        width: 100%;
+        width: 70%;
         height: 100%;
       }
 `
