@@ -1,7 +1,7 @@
-import google    from 'public/google.svg'
-import slack     from 'public/google.svg'
-import atlassian from 'public/google.svg'
-import dropbox   from 'public/google.svg'
+import google    from 'public/slack.svg'
+import slack     from 'public/atlassian.svg'
+import atlassian from 'public/shopify.svg'
+import dropbox   from 'public/slack.svg'
 import shopify   from 'public/google.svg'
 
 export {
